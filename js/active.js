@@ -18,84 +18,80 @@
     // :: 3.0 Sliders Active Code
     if ($.fn.owlCarousel) {
         var welcomeSlide = $('.hero-slides');
-        var testimonials = $('.testimonials-slide');
-        var albumSlides = $('.albums-slideshow');
+        // var testimonials = $('.testimonials-slide');
+        // var albumSlides = $('.albums-slideshow');
 
         welcomeSlide.owlCarousel({
             items: 1,
             margin: 0,
-            loop: true,
+            loop: false,
             nav: false,
             dots: false,
             autoplay: true,
-            autoplayTimeout: 7000,
-            smartSpeed: 1000,
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut'
         });
 
-        welcomeSlide.on('translate.owl.carousel', function () {
-            var slideLayer = $("[data-animation]");
-            slideLayer.each(function () {
-                var anim_name = $(this).data('animation');
-                $(this).removeClass('animated ' + anim_name).css('opacity', '0');
-            });
-        });
+        // welcomeSlide.on('translate.owl.carousel', function () {
+        //     var slideLayer = $("[data-animation]");
+        //     slideLayer.each(function () {
+        //         var anim_name = $(this).data('animation');
+        //         $(this).removeClass('animated ' + anim_name).css('opacity', '0');
+        //     });
+        // });
 
-        welcomeSlide.on('translated.owl.carousel', function () {
-            var slideLayer = welcomeSlide.find('.owl-item.active').find("[data-animation]");
-            slideLayer.each(function () {
-                var anim_name = $(this).data('animation');
-                $(this).addClass('animated ' + anim_name).css('opacity', '1');
-            });
-        });
+        // welcomeSlide.on('translated.owl.carousel', function () {
+        //     var slideLayer = welcomeSlide.find('.owl-item.active').find("[data-animation]");
+        //     slideLayer.each(function () {
+        //         var anim_name = $(this).data('animation');
+        //         $(this).addClass('animated ' + anim_name).css('opacity', '1');
+        //     });
+        // });
 
-        $("[data-delay]").each(function () {
-            var anim_del = $(this).data('delay');
-            $(this).css('animation-delay', anim_del);
-        });
+        // $("[data-delay]").each(function () {
+        //     var anim_del = $(this).data('delay');
+        //     $(this).css('animation-delay', anim_del);
+        // });
 
-        $("[data-duration]").each(function () {
-            var anim_dur = $(this).data('duration');
-            $(this).css('animation-duration', anim_dur);
-        });
+        // $("[data-duration]").each(function () {
+        //     var anim_dur = $(this).data('duration');
+        //     $(this).css('animation-duration', anim_dur);
+        // });
 
-        testimonials.owlCarousel({
-            items: 1,
-            margin: 0,
-            loop: true,
-            dots: false,
-            autoplay: true
-        });
+        // testimonials.owlCarousel({
+        //     items: 1,
+        //     margin: 0,
+        //     loop: true,
+        //     dots: false,
+        //     autoplay: true
+        // });
 
-        albumSlides.owlCarousel({
-            items: 5,
-            margin: 30,
-            loop: true,
-            nav: true,
-            navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa fa-angle-double-right"></i>'],
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            smartSpeed: 750,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                480: {
-                    items: 2
-                },
-                768: {
-                    items: 3
-                },
-                992: {
-                    items: 4
-                },
-                1200: {
-                    items: 5
-                }
-            }
-        });
+        // albumSlides.owlCarousel({
+        //     items: 5,
+        //     margin: 30,
+        //     loop: true,
+        //     nav: true,
+        //     navText: ['<i class="fa fa-angle-double-left"></i>', '<i class="fa fa-angle-double-right"></i>'],
+        //     dots: false,
+        //     autoplay: true,
+        //     autoplayTimeout: 5000,
+        //     smartSpeed: 750,
+        //     responsive: {
+        //         0: {
+        //             items: 1
+        //         },
+        //         480: {
+        //             items: 2
+        //         },
+        //         768: {
+        //             items: 3
+        //         },
+        //         992: {
+        //             items: 4
+        //         },
+        //         1200: {
+        //             items: 5
+        //         }
+        //     }
+        // });
     }
 
     // :: 4.0 Masonary Gallery Active Code
